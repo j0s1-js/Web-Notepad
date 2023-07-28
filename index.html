@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>网页记事本</title>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="box">
+            <div class="title">{{ title }}</div>
+            <div class="container">
+                <div class="edit">
+                    <input type="text" class="inp" placeholder="请输入任务" v-model="job">
+                    <button class="btn" @click="addJob">添加任务</button>
+                </div>
+                <ul class="row" v-show="jobList.length > 0">
+                    <li v-for="(job, index) in jobList" @mouseenter="isShow = job.id" @mouseleave="isShow = 0" :key="job.id">
+                        <span>{{ index + 1 }}.</span>
+                        <span>{{ job.name }}</span>
+                        <button class="btn del" @click="del(job.id)" v-show="isShow === job.id">×</button>
+                    </li> 
+                </ul>
+                <div class="footer" v-show="jobList.length > 0">
+                    <div class="count">合计：{{ jobList.length }}</div>
+                    <button class="btn" @click="clear">清空任务</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

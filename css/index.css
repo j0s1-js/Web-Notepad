@@ -1,0 +1,102 @@
+@font-face {
+    font-family: "ysFont";
+    src: url("../font/ysFont.ttf") format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: #e7e7e7 url(../image/101362781_p0.jpg) center no-repeat fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    font-family: 'ysFont', sans-serif;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    width: 500px;
+    height: 600px;
+    border-radius: 5px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.3);
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 50px;
+    color: #f25d8e;
+    margin: 20px 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.edit {
+    padding: 15px 20px;
+    border: 3px solid #f25d8e;
+    border-radius: 5px;
+}
+
+.inp {
+    background: none;
+    outline: none;
+    border: none;
+    color: #f25d8e;
+    font-size: 1.25rem;
+}
+
+.inp::placeholder{
+    font-style: italic;
+    color: #f25d8e;
+}
+
+.btn {
+    background: none;
+    border: none;
+    color: #f25d8e;
+    font-size: 1.25rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.del {
+    float: right;
+}
+
+.row {
+    width: 95%;
+    max-height: 320px;
+    list-style-type: none;
+    padding: 0 10px;
+    overflow-x: hidden;
+}
+
+.row li {
+    margin-top: 20px;
+    color: #f25d8e;
+    font-size: 1.25rem;
+    border-bottom: 1px solid #fff;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.count {
+    color: #f25d8e;
+    font-size: 1.25rem;
+}
